@@ -1,0 +1,257 @@
+---
+import Footer from "../components/sections/Footer.tsx";
+import Navbar from "../components/sections/Navbar.tsx";
+---
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+
+        <!-- SEO Meta Tags -->
+        <title>
+            Brevana Hotel Boutique - Refugio Costero Auténtico en República
+            Dominicana
+        </title>
+        <meta
+            name="description"
+            content="Un refugio costero inspirado en la mamajuana, donde el mar Caribe y el río Yeguada se combinan con experiencias culturales, gastronomía y naturaleza. Perfecto para familias y viajeros."
+        />
+        <meta
+            name="keywords"
+            content="hotel boutique, República Dominicana, Miches, mar Caribe, río Yeguada, mamajuana, experiencias familiares, turismo cultural"
+        />
+
+        <!-- Open Graph Meta Tags -->
+        <meta
+            property="og:title"
+            content="Brevana Hotel Boutique - Refugio Costero Auténtico"
+        />
+        <meta
+            property="og:description"
+            content="Experiencias auténticas entre el mar Caribe y el río Yeguada. Gastronomía, cultura y naturaleza en un ambiente familiar."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://brevana.com" />
+        <meta property="og:image" content="https://brevana.com/og-image.jpg" />
+
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Brevana Hotel Boutique - Refugio Costero Auténtico"
+        />
+        <meta
+            name="twitter:description"
+            content="Experiencias auténticas entre el mar Caribe y el río Yeguada. Perfecto para familias."
+        />
+        <meta
+            name="twitter:image"
+            content="https://brevana.com/twitter-image.jpg"
+        />
+
+        <!-- Additional Meta Tags -->
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Brevana Hotel Boutique" />
+        <link rel="canonical" href="https://brevana.com" />
+
+        <!-- Schema.org JSON-LD -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Hotel",
+                "name": "Brevana Hotel Boutique",
+                "description": "Un refugio costero inspirado en la mamajuana, donde el mar Caribe y el río Yeguada se combinan con experiencias culturales, gastronomía y naturaleza.",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Carretera Miches – El Cedro, zona rural al norte del municipio de Miches",
+                    "addressLocality": "Miches",
+                    "addressRegion": "Provincia El Seibo",
+                    "addressCountry": "República Dominicana"
+                },
+                "telephone": "+1-829-357-9841",
+                "url": "https://brevana.com",
+                "sameAs": [
+                    "https://www.instagram.com/brevanahotel",
+                    "https://www.facebook.com/brevanahotel"
+                ],
+                "amenityFeature": [
+                    {
+                        "@type": "LocationFeatureSpecification",
+                        "name": "WiFi Premium"
+                    },
+                    {
+                        "@type": "LocationFeatureSpecification",
+                        "name": "Estacionamiento Privado"
+                    },
+                    {
+                        "@type": "LocationFeatureSpecification",
+                        "name": "Actividades Familiares"
+                    },
+                    {
+                        "@type": "LocationFeatureSpecification",
+                        "name": "Gastronomía Local"
+                    },
+                    {
+                        "@type": "LocationFeatureSpecification",
+                        "name": "Experiencias Culturales"
+                    }
+                ],
+                "starRating": {
+                    "@type": "Rating",
+                    "ratingValue": "4.5"
+                }
+            }
+        </script>
+
+        <!-- Smooth Scrolling CSS -->
+        <style>
+            html {
+                scroll-behavior: smooth;
+                font-family:
+                    "Manrope",
+                    system-ui,
+                    -apple-system,
+                    sans-serif;
+            }
+
+            /* Custom scrollbar */
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: oklch(0.94 0.004 0);
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: oklch(0.64 0.18 80);
+                border-radius: 4px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: oklch(0.56 0.16 75);
+            }
+
+            /* Loading animation */
+            .page-loader {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(
+                    135deg,
+                    oklch(0.64 0.18 80) 0%,
+                    oklch(0.52 0.16 188) 100%
+                );
+                z-index: 9999;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 1;
+                transition: opacity 0.5s ease-out;
+            }
+
+            .page-loader.hidden {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .loader-content {
+                text-align: center;
+                color: white;
+            }
+
+            .loader-logo {
+                font-size: 4rem;
+                font-weight: 800;
+                margin-bottom: 1rem;
+                animation: pulse 3s ease-in-out infinite;
+                font-family: "Marcellus SC", ui-serif, serif;
+            }
+
+            .loader-text {
+                font-size: 1rem;
+                font-weight: 300;
+                opacity: 0.8;
+            }
+
+            @keyframes pulse {
+                0%,
+                100% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.05);
+                }
+            }
+        </style>
+    </head>
+    <body class="antialiased">
+        <!-- Page Loader -->
+        <div id="page-loader" class="page-loader">
+            <div class="loader-content">
+                <div class="loader-logo">BREVANA</div>
+            </div>
+        </div>
+
+        <Navbar client:load />
+        <main class="max-w-[1440px] mx-auto px-8 md:px-16 lg:px-24">
+            <slot />
+        </main>
+        <Footer client:visible />
+        <script>
+            // Page loader
+            window.addEventListener("load", () => {
+                const loader = document.getElementById("page-loader");
+                setTimeout(() => {
+                    loader?.classList.add("hidden");
+                }, 1000);
+            });
+
+            // Smooth scroll for navigation links
+            document.addEventListener("DOMContentLoaded", () => {
+                const links = document.querySelectorAll('a[href^="#"]');
+                links.forEach((link) => {
+                    link.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        const targetId = link.getAttribute("href");
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar
+                            window.scrollTo({
+                                top: offsetTop,
+                                behavior: "smooth",
+                            });
+                        }
+                    });
+                });
+            });
+
+            // Add scroll-based animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px",
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animate-in");
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections when DOM is loaded
+            document.addEventListener("DOMContentLoaded", () => {
+                const sections = document.querySelectorAll("section");
+                sections.forEach((section) => {
+                    observer.observe(section);
+                });
+            });
+        </script>
+    </body>
+</html>

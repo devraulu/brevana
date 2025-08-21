@@ -1,25 +1,21 @@
 ---
-import '../styles/global.css';
-// Component Imports
-import Button from '../components/Button.astro';
+import "../styles/global.css";
+import Hero from "../components/sections/Hero.tsx";
+import About from "../components/sections/About.tsx";
+import Gallery from "../components/sections/Gallery.tsx";
+import Rooms from "../components/sections/Rooms.tsx";
+import Experiences from "../components/sections/Experiences.tsx";
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+import GettingHere from "../components/sections/GettingHere.tsx";
+import DefaultLayout from "../layouts/DefaultLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
+<DefaultLayout>
+    <Hero client:load />
+    <About client:visible />
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
-	</body>
-</html>
+    <Gallery client:visible />
+    <Rooms client:visible />
+    <Experiences client:visible />
+    <GettingHere client:visible />
+</DefaultLayout>
