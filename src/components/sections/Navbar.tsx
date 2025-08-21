@@ -43,8 +43,8 @@ const Navbar = () => {
         <div className="absolute left-0 md:hidden">
           <Drawer open={isOpen} onOpenChange={setIsOpen} direction="left">
             <DrawerTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
+              <Button variant="ghost" size="icon" className="pl-10">
+                <Menu className="size-7" />
               </Button>
             </DrawerTrigger>
             <DrawerContent className="w-[300px] sm:w-[400px]">
@@ -69,7 +69,10 @@ const Navbar = () => {
                     <Phone className="h-4 w-4" />
                     <span>+1 (829) 357-9841</span>
                   </div>
-                  <Button className="w-full uppercase px-6 py-3">
+                  <Button
+                    variant="brevana"
+                    className="w-full uppercase px-6 py-3"
+                  >
                     Reservar
                   </Button>
                 </div>
@@ -92,7 +95,9 @@ const Navbar = () => {
             <Phone className="h-4 w-4" />
             <span>+1 (829) 357-9841</span>
           </div>
-          <Button className="uppercase px-6 py-2">Reservar</Button>
+          <Button variant="brevana" className="uppercase px-6 py-2">
+            Reservar
+          </Button>
         </div>
       </div>
       <div className="border-t border-b border-brevana-200">

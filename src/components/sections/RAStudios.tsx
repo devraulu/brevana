@@ -1,5 +1,5 @@
 import React from "react";
-import { Instagram, Building, Compass } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 const RAStudios = () => {
   return (
@@ -34,8 +34,12 @@ const RAStudios = () => {
         {/* RA Studio Info */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center space-x-3 bg-brevana-50/80 backdrop-blur-sm px-8 py-4 rounded-full border border-brevana-200">
-            <div className="w-12 h-12 bg-gradient-to-br from-brevana-200 to-brevana-300 rounded-full flex items-center justify-center">
-              <Building className="w-6 h-6 text-brevana-800" />
+            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-brevana-300">
+              <img 
+                src="/ra-logo.png" 
+                alt="RA Studio Logo" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="text-left">
               <div className="font-medium text-brevana-900">RA Studio</div>

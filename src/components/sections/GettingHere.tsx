@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import mapboxgl from "mapbox-gl";
 import { MapPin, Plane, Navigation } from "lucide-react";
+import { Button } from "../ui/button";
 
 // Set Mapbox access token from environment variable
 mapboxgl.accessToken = import.meta.env.PUBLIC_MAPBOX_ACCESS_TOKEN;
@@ -71,18 +72,18 @@ const GettingHere = () => {
             </div>
 
             {/* Get Directions Button */}
-            <button
+            <Button
               onClick={() =>
                 window.open(
                   `https://www.google.com/maps?q=${coordinates[1]},${coordinates[0]}`,
                   "_blank",
                 )
               }
-              className="inline-flex items-center space-x-2 border border-neutral-700 text-neutral-900 px-6 py-2 text-sm uppercase tracking-wider hover:border-neutral-900 hover:bg-neutral-900 hover:text-white transition-all duration-300"
+              className="inline-flex items-center space-x-2 uppercase hover:scale-105 transition-all duration-300"
             >
               <Navigation className="w-4 h-4" />
-              <span>Ver direcciones</span>
-            </button>
+              Ver direcciones
+            </Button>
           </div>
         </div>
       </div>

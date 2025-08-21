@@ -199,9 +199,9 @@ const Rooms = () => {
 
         {/* View All Button */}
         <div className="text-center mt-16">
-          <button className="border border-neutral-300 text-neutral-900 px-8 py-3 text-sm uppercase tracking-wider hover:border-neutral-900 hover:bg-neutral-900 hover:text-white transition-all duration-300">
+          <Button variant="outline" className="uppercase px-8 py-3">
             Ver Todas las Habitaciones
-          </button>
+          </Button>
         </div>
       </div>
     </section>
