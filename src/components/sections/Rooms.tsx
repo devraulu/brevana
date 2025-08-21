@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "../ui/button";
+import { ResponsiveImage } from "../ui/responsive-image";
 
 const Rooms = () => {
   const [currentElixirImage, setCurrentElixirImage] = useState(0);
@@ -12,10 +13,10 @@ const Rooms = () => {
     description:
       "Habitaciones íntimas con jacuzzi privado, perfectas para desconectar y revitalizarte frente al mar Caribe.",
     images: [
-      "/images/elixir.webp",
-      "/images/elixir-2.webp",
-      "/images/elixir-3.webp",
-      "/images/jacuzzi.webp",
+      "elixir",
+      "elixir-2",
+      "elixir-3",
+      "jacuzzi",
     ],
     size: "35 m²",
     capacity: "2 adultos",
@@ -26,10 +27,10 @@ const Rooms = () => {
     description:
       "Espaciosas casitas con cocina equipada y terraza privada, ideales para familias que buscan independencia y comodidad junto al río Yeguada.",
     images: [
-      "/images/cortezas.webp",
-      "/images/cortezas-2.webp",
-      "/images/cortezas-3.webp",
-      "/images/cortezas-bar.webp",
+      "cortezas",
+      "cortezas-2",
+      "cortezas-3",
+      "cortezas-bar",
     ],
     size: "65 m²",
     capacity: "4 adultos + 2 niños",
@@ -76,16 +77,20 @@ const Rooms = () => {
             <div className="relative">
               <div className="aspect-[3/4] overflow-hidden mb-6">
                 <AnimatePresence mode="wait">
-                  <motion.img
+                  <motion.div
                     key={currentElixirImage}
-                    src={elixir.images[currentElixirImage]}
-                    alt={`${elixir.title} - Imagen ${currentElixirImage + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
-                  />
+                  >
+                    <ResponsiveImage
+                      src={elixir.images[currentElixirImage]}
+                      alt={`${elixir.title} - Imagen ${currentElixirImage + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </motion.div>
                 </AnimatePresence>
               </div>
 
@@ -134,16 +139,20 @@ const Rooms = () => {
             <div className="relative">
               <div className="aspect-[3/4] overflow-hidden mb-6">
                 <AnimatePresence mode="wait">
-                  <motion.img
+                  <motion.div
                     key={currentCortezaImage}
-                    src={cortezas.images[currentCortezaImage]}
-                    alt={`${cortezas.title} - Imagen ${currentCortezaImage + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
-                  />
+                  >
+                    <ResponsiveImage
+                      src={cortezas.images[currentCortezaImage]}
+                      alt={`${cortezas.title} - Imagen ${currentCortezaImage + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </motion.div>
                 </AnimatePresence>
               </div>
 

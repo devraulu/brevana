@@ -1,173 +1,174 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import useEmblaCarousel from "embla-carousel-react";
 import { cn } from "@/lib/utils";
+import { ResponsiveImage } from "@/components/ui/responsive-image";
 
 const images = [
   {
-    src: "/images/elixir.webp",
+    src: "elixir",
     alt: "Brevana suite with ocean view",
     width: 600,
     height: 800,
   },
   {
-    src: "/images/aerial.webp",
+    src: "aerial",
     alt: "Caribbean coastline",
     width: 800,
     height: 600,
   },
   {
-    src: "/images/cortezas-bar.webp",
+    src: "cortezas-bar",
     alt: "Mamajuana preparation",
     width: 500,
     height: 700,
   },
   {
-    src: "/images/main-lobby.webp",
+    src: "main-lobby",
     alt: "Hotel exterior at sunset",
     width: 700,
     height: 500,
   },
   {
-    src: "/images/walk.webp",
+    src: "walk",
     alt: "River Yeguada flowing",
     width: 600,
     height: 900,
   },
   {
-    src: "/images/main-lobby-2.webp",
+    src: "main-lobby-2",
     alt: "Local cultural experience",
     width: 900,
     height: 600,
   },
   {
-    src: "/images/bar.webp",
+    src: "bar",
     alt: "Dining experience",
     width: 550,
     height: 750,
   },
   {
-    src: "/images/shared-jacuzzi.webp",
+    src: "shared-jacuzzi",
     alt: "Wellness and spa",
     width: 750,
     height: 550,
   },
   {
-    src: "/images/chaise.webp",
+    src: "chaise",
     alt: "Tropical garden views",
     width: 650,
     height: 850,
   },
   {
-    src: "/images/pool.webp",
+    src: "pool",
     alt: "Pool deck area",
     width: 800,
     height: 500,
   },
   {
-    src: "/images/lobby.webp",
+    src: "lobby",
     alt: "Sunset terrace dining",
     width: 550,
     height: 800,
   },
   {
-    src: "/images/driveway.webp",
+    src: "driveway",
     alt: "Private beach access",
     width: 700,
     height: 600,
   },
   {
-    src: "/images/driveway-2.webp",
+    src: "driveway-2",
     alt: "Nature trail exploration",
     width: 600,
     height: 750,
   },
   {
-    src: "/images/main-lobby-3.webp",
+    src: "main-lobby-3",
     alt: "Local market experience",
     width: 900,
     height: 500,
   },
   {
-    src: "/images/elixir-2.webp",
+    src: "elixir-2",
     alt: "Yoga pavilion",
     width: 500,
     height: 900,
   },
   {
-    src: "/images/bar-2.webp",
+    src: "bar-2",
     alt: "Rum tasting session",
     width: 750,
     height: 650,
   },
   {
-    src: "/images/pool-3.webp",
+    src: "pool-3",
     alt: "Adventure tour activities",
     width: 650,
     height: 700,
   },
   {
-    src: "/images/main-lobby-4.webp",
+    src: "main-lobby-4",
     alt: "Breakfast with a view",
     width: 800,
     height: 650,
   },
   {
-    src: "/images/cortezas.webp",
+    src: "cortezas",
     alt: "Stone pathway through gardens",
     width: 600,
     height: 800,
   },
   {
-    src: "/images/lobby-2.webp",
+    src: "lobby-2",
     alt: "Evening lounge area",
     width: 850,
     height: 600,
   },
   {
-    src: "/images/cortezas-2.webp",
+    src: "cortezas-2",
     alt: "Local artisan crafts",
     width: 550,
     height: 750,
   },
   {
-    src: "/images/elixir-3.webp",
+    src: "elixir-3",
     alt: "Rainforest canopy view",
     width: 700,
     height: 550,
   },
   {
-    src: "/images/cortezas-3.webp",
+    src: "cortezas-3",
     alt: "Fire pit evening gatherings",
     width: 600,
     height: 900,
   },
   {
-    src: "/images/main-lobby-5.webp",
+    src: "main-lobby-5",
     alt: "Organic farm visit",
     width: 900,
     height: 550,
   },
   {
-    src: "/images/shared-jacuzzi-2.webp",
+    src: "shared-jacuzzi-2",
     alt: "Hammock relaxation spot",
     width: 650,
     height: 800,
   },
   {
-    src: "/images/pool-4.webp",
+    src: "pool-4",
     alt: "Coral reef diving",
     width: 750,
     height: 700,
   },
   {
-    src: "/images/shared-jacuzzi-3.webp",
+    src: "shared-jacuzzi-3",
     alt: "Meditation garden space",
     width: 800,
     height: 750,
   },
   {
-    src: "/images/shared-jacuzzi-4.webp",
+    src: "shared-jacuzzi-4",
     alt: "Stargazing deck at night",
     width: 550,
     height: 650,
@@ -240,7 +241,7 @@ const Gallery = () => {
                       whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.6, ease: "easeOut" }}
                     >
-                      <img
+                      <ResponsiveImage
                         src={image.src}
                         alt={image.alt}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

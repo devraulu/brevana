@@ -1,4 +1,5 @@
 import React from "react";
+import { ResponsiveImage } from "../ui/responsive-image";
 
 const Experiences = () => {
   const experiences = [
@@ -7,8 +8,7 @@ const Experiences = () => {
       title: "Bar Caribeño",
       description:
         "Risas en el bar, ritmos auténticos y música en vivo que vibra hasta altas horas. Un espacio donde se mezclan viajeros curiosos, familias y amigos para bailar y compartir momentos únicos.",
-      image:
-        "/images/bar.webp",
+      image: "bar",
       link: "Descubre Brevana Miches",
     },
     {
@@ -16,8 +16,7 @@ const Experiences = () => {
       title: "Jacuzzi Compartido",
       description:
         "Entre el mar Caribe y el río Yeguada, disfruta de un espacio de relajación donde la naturaleza y el bienestar se encuentran para crear experiencias memorables y tranquilas.",
-      image:
-        "/images/shared-jacuzzi.webp",
+      image: "shared-jacuzzi",
       link: "Descubre Brevana Miches",
     },
     {
@@ -25,8 +24,7 @@ const Experiences = () => {
       title: "Actividades Naturales",
       description:
         "Kayaks navegando el río, rutas de senderismo, clases de cocina y juegos para todas las edades. Cada día puedes llenarlo de aventura o disfrutarlo descansando en la playa.",
-      image:
-        "/images/pool.webp",
+      image: "pool",
       link: "Descubre Brevana Miches",
     },
     {
@@ -34,8 +32,7 @@ const Experiences = () => {
       title: "Tradiciones Mamajuana",
       description:
         "Aromas que salen de la cocina, experiencias culinarias auténticas y la preparación tradicional de mamajuana. Un refugio costero donde la gastronomía dominicana cobra vida con recetas familiares y sabores del Caribe.",
-      image:
-        "/images/main-lobby.webp",
+      image: "main-lobby",
       link: "Descubre Brevana Miches",
       isWide: true,
     },
@@ -44,8 +41,7 @@ const Experiences = () => {
       title: "Mañanas Lentas",
       description:
         "Un regreso a las mañanas lentas y al horizonte abierto. Cada día comienza con un despertar frente al mar o junto al río Yeguada, donde puedes disfrutar de un atardecer con un trago en mano.",
-      image:
-        "/images/chaise.webp",
+      image: "chaise",
       link: "Descubre Brevana Miches",
     },
   ];
@@ -74,7 +70,7 @@ const Experiences = () => {
             >
               {/* Image */}
               <div className="h-80 overflow-hidden">
-                <img
+                <ResponsiveImage
                   src={experience.image}
                   alt={experience.title}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
