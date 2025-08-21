@@ -47,13 +47,13 @@ const Experiences = () => {
   ];
 
   return (
-    <section id="experiences" className="py-24 md:py-32 bg-white">
+    <section id="experiences" className="py-24 md:py-32 bg-brevana-50">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className="text-center mb-16 md:mb-24">
-          <h2 className="text-3xl md:text-4xl font-light text-neutral-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-light text-brevana-900 mb-6">
             Lo que vive aquí
           </h2>
-          <p className="text-lg text-neutral-700 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg text-brevana-700 leading-relaxed max-w-3xl mx-auto">
             Brevana es más que un hotel, es un ritmo que se siente. Entre el mar
             y el río, cada rincón está vivo con actividades, encuentros y
             momentos para recordar.
@@ -80,19 +80,19 @@ const Experiences = () => {
               {/* Content */}
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <div className="text-sm uppercase tracking-wider text-neutral-500">
+                  <div className="text-sm uppercase tracking-wider text-brevana-600">
                     {experience.category}
                   </div>
-                  <h3 className="text-xl md:text-2xl font-light text-neutral-900">
+                  <h3 className="text-xl md:text-2xl font-light text-brevana-900">
                     {experience.title}
                   </h3>
                 </div>
 
-                <p className="text-base text-neutral-700 leading-relaxed">
+                <p className="text-base text-brevana-700 leading-relaxed">
                   {experience.description}
                 </p>
 
-                <button className="text-sm uppercase tracking-wider text-neutral-900 border-b border-neutral-300 hover:border-neutral-900 pb-1 transition-colors duration-200">
+                <button className="text-sm uppercase tracking-wider text-brevana-900 border-b border-brevana-300 hover:border-brevana-800 hover:text-brevana-800 pb-1 transition-colors duration-200">
                   {experience.link}
                 </button>
               </div>

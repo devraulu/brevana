@@ -7,6 +7,7 @@ import Rooms from "../components/sections/Rooms.tsx";
 import Experiences from "../components/sections/Experiences.tsx";
 
 import GettingHere from "../components/sections/GettingHere.tsx";
+import RAStudios from "../components/sections/RAStudios.tsx";
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 ---
 
@@ -15,7 +16,8 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
     <About client:visible />
 
     <Gallery client:visible />
-    <Rooms client:visible />
+    <!-- <Rooms client:visible /> -->
     <Experiences client:visible />
     <GettingHere client:visible />
+    <RAStudios client:visible />
 </DefaultLayout>

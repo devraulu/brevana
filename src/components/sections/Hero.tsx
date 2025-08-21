@@ -7,8 +7,8 @@ const Hero = () => {
       <div className="relative w-full h-full flex items-center justify-center">
         <div className="relative w-full aspect-[16/10] rounded-none overflow-hidden">
           <ResponsiveImage
-            src="aerial"
-            alt="Brevana Hotel Boutique - Caribbean Coast"
+            src="driveway-2"
+            alt="Brevana - Costa Caribeña"
             className="w-full h-full object-cover"
             priority={true}
           />

@@ -33,12 +33,14 @@ const GettingHere = () => {
   }, []);
 
   return (
-    <section id="getting-here" className="pt-10 md:pt-16 bg-white">
+    <section id="getting-here" className="pt-10 md:pt-16">
       <div className="text-center mb-8">
         <span className="text-xs block uppercase text-center">
           18°59'12.3"N 69°02'23.6"W
         </span>
-        <span className="text-3xl font-bold mt-4 block">Cómo llegar</span>
+        <h2 className="text-3xl md:text-4xl font-light text-brevana-900 mt-4 block">
+          Cómo llegar
+        </h2>
 
         {/* Map Container - Full Width */}
         <div

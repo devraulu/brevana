@@ -13,23 +13,23 @@ export const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
   alt,
   className = '',
   priority = false,
-  sizes = '(max-width: 640px) 400px, (max-width: 1024px) 800px, (max-width: 1440px) 1200px, 1920px'
+  sizes = '(max-width: 768px) 600px, (max-width: 1200px) 1000px, (max-width: 1600px) 1440px, 1920px'
 }) => {
   const baseSrc = src.replace('/images/', '').replace('.webp', '');
   
   return (
     <picture>
       <source 
-        media="(max-width: 640px)" 
-        srcSet={`/images/${baseSrc}-400w.webp`} 
+        media="(max-width: 768px)" 
+        srcSet={`/images/${baseSrc}-600w.webp`} 
       />
       <source 
-        media="(max-width: 1024px)" 
-        srcSet={`/images/${baseSrc}-800w.webp`} 
+        media="(max-width: 1200px)" 
+        srcSet={`/images/${baseSrc}-1000w.webp`} 
       />
       <source 
-        media="(max-width: 1440px)" 
-        srcSet={`/images/${baseSrc}-1200w.webp`} 
+        media="(max-width: 1600px)" 
+        srcSet={`/images/${baseSrc}-1440w.webp`} 
       />
       <img
         src={`/images/${baseSrc}-1920w.webp`}

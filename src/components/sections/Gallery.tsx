@@ -206,7 +206,7 @@ const Gallery = () => {
   // Custom navigation bar component
 
   return (
-    <section id="gallery" className="pt-16 bg-white overflow-hidden">
+    <section id="gallery" className="pt-16 overflow-hidden">
       <div className="px-8 md:px-16 lg:px-24">
         <div className="w-full">
           <div className="overflow-hidden" ref={emblaRef}>

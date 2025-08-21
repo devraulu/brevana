@@ -17,6 +17,17 @@
     --color-font-logo: var(--font-logo);
 
     /* Brevana Brand Colors - OKLCH */
+    --color-brevana-50: var(--brevana-50);
+    --color-brevana-100: var(--brevana-100);
+    --color-brevana-200: var(--brevana-200);
+    --color-brevana-300: var(--brevana-300);
+    --color-brevana-400: var(--brevana-400);
+    --color-brevana-500: var(--brevana-500);
+    --color-brevana-600: var(--brevana-600);
+    --color-brevana-700: var(--brevana-700);
+    --color-brevana-800: var(--brevana-800);
+    --color-brevana-900: var(--brevana-900);
+
     --color-amber-50: var(--amber-50);
     --color-amber-100: var(--amber-100);
     --color-amber-200: var(--amber-200);
@@ -105,6 +116,18 @@
 :root {
     --radius: 0.625rem;
 
+    /* Brevana Custom Brand Colors - Based on #791F05 */
+    --brevana-50: #fef7f0;
+    --brevana-100: #feeee0;
+    --brevana-200: #fdd9c0;
+    --brevana-300: #fbc195;
+    --brevana-400: #f8a069;
+    --brevana-500: #f4853f;
+    --brevana-600: #e66f1f;
+    --brevana-700: #bc5818;
+    --brevana-800: #954518;
+    --brevana-900: #791f05;
+
     /* Brevana Brand Colors - OKLCH */
     --amber-50: oklch(0.98 0.02 85);
     --amber-100: oklch(0.95 0.04 85);
@@ -159,29 +182,29 @@
     --red-600: oklch(0.55 0.22 29);
 
     /* Base System Colors */
-    --background: var(--neutral-50);
-    --foreground: var(--neutral-900);
+    --background: var(--brevana-50);
+    --foreground: var(--brevana-900);
     --card: oklch(1 0 0);
-    --card-foreground: var(--neutral-900);
+    --card-foreground: var(--brevana-900);
     --popover: oklch(1 0 0);
-    --popover-foreground: var(--neutral-900);
-    --primary: var(--neutral-900);
-    --primary-foreground: oklch(1 0 0);
-    --secondary: var(--neutral-100);
-    --secondary-foreground: var(--neutral-900);
-    --muted: var(--neutral-100);
-    --muted-foreground: var(--neutral-500);
-    --accent: var(--neutral-100);
-    --accent-foreground: var(--neutral-900);
+    --popover-foreground: var(--brevana-900);
+    --primary: var(--brevana-900);
+    --primary-foreground: var(--brevana-50);
+    --secondary: var(--brevana-100);
+    --secondary-foreground: var(--brevana-900);
+    --muted: var(--brevana-100);
+    --muted-foreground: var(--brevana-700);
+    --accent: var(--brevana-100);
+    --accent-foreground: var(--brevana-900);
     --destructive: var(--red-500);
     --border: var(--neutral-200);
     --input: var(--neutral-200);
     --ring: var(--neutral-400);
-    --chart-1: var(--amber-600);
-    --chart-2: var(--teal-600);
-    --chart-3: var(--orange-600);
-    --chart-4: var(--amber-400);
-    --chart-5: var(--teal-400);
+    --chart-1: var(--brevana-600);
+    --chart-2: var(--brevana-500);
+    --chart-3: var(--brevana-700);
+    --chart-4: var(--brevana-400);
+    --chart-5: var(--brevana-800);
     --sidebar: oklch(1 0 0);
     --sidebar-foreground: var(--neutral-900);
     --sidebar-primary: var(--neutral-900);
@@ -396,17 +419,17 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: var(--amber-600);
+    background: var(--brevana-600);
     border-radius: 3px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: var(--amber-700);
+    background: var(--brevana-700);
 }
 
 /* Enhanced focus styles for accessibility */
 .focus-ring:focus {
-    outline: 2px solid var(--amber-600);
+    outline: 2px solid var(--brevana-600);
     outline-offset: 2px;
 }
 
@@ -431,24 +454,30 @@
 .btn-primary {
     background: linear-gradient(
         135deg,
-        var(--amber-600) 0%,
-        var(--amber-700) 100%
+        var(--brevana-600) 0%,
+        var(--brevana-700) 100%
     );
-    box-shadow: 0 4px 14px 0 oklch(var(--amber-600) / 0.39);
+    box-shadow: 0 4px 14px 0 rgba(121, 31, 5, 0.39);
     transition: all 0.3s ease;
+    color: var(--brevana-50);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px oklch(var(--amber-600) / 0.4);
+    box-shadow: 0 6px 20px rgba(121, 31, 5, 0.4);
+    background: linear-gradient(
+        135deg,
+        var(--brevana-700) 0%,
+        var(--brevana-800) 100%
+    );
 }
 
 /* Typography enhancements */
 .heading-primary {
     background: linear-gradient(
         135deg,
-        var(--amber-600) 0%,
-        var(--teal-600) 100%
+        var(--brevana-600) 0%,
+        var(--brevana-800) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
